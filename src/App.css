@@ -1,38 +1,256 @@
+@import url("https:///fonts.googleapis.com/css2?family=IBM Plex Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "IBM Plex Sans";
+}
+
+.MuiContainer-root.MuiContainer-maxWidthNone {
+  padding: 0px !important;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  padding: 10px 40px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #ffffff;
+  height: 87px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid #eaecf0;
 }
 
-.App-link {
-  color: #61dafb;
+.App-title h1 {
+  color: #101828;
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-title p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #475467;
+}
+
+.App-notification-icon {
+  position: relative;
+}
+
+.App-notification-icon .App-notifiction-count {
+  position: absolute;
+  background: #f04438;
+  border-radius: 16px;
+  padding: 3px 7px;
+  color: #ffffff;
+  font-size: 12px;
+  right: -5px;
+  bottom: 3px;
+}
+
+.App-content {
+  padding-top: 40px;
+}
+
+.App-image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.App-image-wrapper img {
+  width: 100%;
+}
+
+.App-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-details .App-avatar-wrapper {
+  position: relative;
+  width: 144px;
+  height: auto;
+}
+
+.App-details .App-avatar {
+  position: absolute;
+  top: -50px;
+}
+
+.App-info h2 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #101828;
+  margin: 0;
+  word-spacing: 3px;
+}
+
+.App-info p {
+  margin: 0;
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #475467;
+}
+
+.App-info p span.App-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 12px 4px 10px;
+  background: #fffaeb;
+  border-radius: 16px;
+  color: #b54708;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.App-info p span.App-status span.dot {
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  background: #f79009;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.App-details .App-button,
+.App-catalog .App-button {
+  padding: 8px 14px;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: none;
+  color: #344054;
+}
+
+.App-details .App-button:hover,
+.App-catalog .App-button:hover {
+  border-color: #d0d5dd;
+}
+
+.App-catalog .App-catalog-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.App-catalog .App-catalog-title h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #101828;
+  margin: 0;
+}
+
+.App-catalog .App-catalog-list {
+  padding-top: 20px;
+}
+
+.App-catalog-list .App-item {
+  border: 1px solid #d0d5dd;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.App-catalog-list .App-item .App-item-image-wrapper {
+  width: 100%;
+  height: 132px;
+  background: #f2f4f7;
+  border-radius: 12px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.App-item-info {
+  margin-top: 10px;
+}
+
+.App-item-info .App-avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.App-item-info .App-bidder-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #344054;
+}
+
+.App-item-info .App-bidder-name .App-bidder-rank {
+  color: #98a2b3;
+  font-weight: 400;
+}
+
+.App-item-details {
+  margin-top: 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.App-item-details .App-item-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101828;
+}
+
+.App-item-details .App-item-price-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #344054;
+}
+
+.App-item-details .App-item-price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #344054;
+}
+
+.App-item-action {
+  margin-top: 10px;
+}
+
+.App-item-action .App-button {
+  background: #004ccc;
+  border: 1px solid #004ccc;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.App-item-action .App-button:hover {
+  box-shadow: none;
+  background-color: #073481;
 }
